@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Builder</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/7c5ad31d55.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="game">
+            <div class="gameArea">
+            </div>
+            <div class="gameMenu">
+                <div class="upgrades">
+                    <div class="headerUpg">
+                        <p>Add new</p>
+                    </div>
+                    <div class="buildings upg">
+                        <img src="img/home.jpg" alt="home">
+                        <p class="costBuilding cst"><span data-money="buildingCost"></span></p>
+                    </div>
+                    <div class="cars upg">
+                        <img src="img/car.jpg" alt="car">
+                        <p class="costCar cst"><span data-money="carCost"></span></p>
+                    </div>
+                    <div class="people upg">
+                        <img src="img/people..jpg" alt="people">
+                        <p class="costPeople cst"><span data-money="peopleCost"></span></p>
+                    </div>
+                </div>
+                <div class="counter">
+                    <button class="earner">Earn money</button>
+                    <p>Your wallet: <span data-money="playerMoney">0$</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
