@@ -6,9 +6,9 @@
 /* -------Variables------- */
 /* --------------------- */
 :root {
-    --postionYGameArea: 40px;
-    --heightGameArea: 600px;
-    --positionYGameMenu: calc(var(--postionYGameArea) + var(--heightGameArea) + 50px);
+    --postionYGameArea: 0;
+    --heightGameArea: 520px;
+    --positionYGameMenu: calc(var(--postionYGameArea) + var(--heightGameArea));
 }
 
 * {
@@ -23,28 +23,34 @@ body {
 }
 
 .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
     max-width: 1440px;
+    min-height: 100vh;
     margin: 0 auto;
+}
+
+.wrapper .gameArea,
+.wrapper .gameMenu {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 0 14px black;
+    border: 1px solid;
 }
 
 /* --------------------- */
 /* -------Game area------- */
 /* --------------------- */
 
-.wrapper .gameArea,
-.wrapper .gameMenu {
-    width: 80%;
-    margin: 10px auto;
-    box-shadow: 0 0 14px black;
-    border: 1px solid;
-}
-
 .wrapper .gameArea {
-    position: relative;
     overflow: hidden;
     height: var(--heightGameArea);
     top: var(--postionYGameArea);
     background-color: rgb(207, 207, 207);
+    margin-top: 10px;
 }
 
 /* --------------------- */
@@ -88,6 +94,7 @@ body {
     height: 240px;
     top: var(--positionYGameMenu);
     background-color: rgb(194, 144, 111);
+    margin-bottom: 10px;
 }
 
 .gameMenu .upgrades,
@@ -110,17 +117,24 @@ body {
 }
 
 .gameMenu .counter button {
+    position: relative;
     text-transform: uppercase;
     padding: 15px 30px;
+    border-radius: 20px;
     background-color: rgb(211, 92, 13);
+    box-shadow: 0 3px rgba(145, 84, 41, 0.425);
     font-size: 24px;
     font-weight: bold;
-    cursor: pointer;
-
 }
 
 .gameMenu .counter button:hover {
     background-color: rgb(204, 121, 65);
+}
+
+.gameMenu .counter button:active {
+    background-color: rgb(204, 121, 65);
+    box-shadow: 0 1px black;
+    transform: translateY(4px);
 }
 
 .gameMenu .counter p {
@@ -130,6 +144,10 @@ body {
 .gameMenu .counter p span {
     font-weight: normal;
     color: green;
+}
+
+.gameMenu .fa-dollar-sign {
+    color: rgb(255, 196, 0);
 }
 
 /* --------------------- */
