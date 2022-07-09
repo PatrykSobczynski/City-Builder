@@ -16,7 +16,7 @@
 
 body {
     background-color: rgb(58, 58, 58);
-    font-family: roboto, arial, sans-serif;
+    font-family: 'roboto', arial, sans-serif;
 }
 
 .wrapper {
@@ -56,8 +56,8 @@ body {
 
 .gameArea i {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 45%;
+    bottom: 50%;
     cursor: grab;
 }
 
@@ -113,22 +113,24 @@ body {
     align-items: center;
 }
 
-.gameMenu .counter button {
+.gameMenu .counter .earner {
     position: relative;
     text-transform: uppercase;
     padding: 15px 30px;
     border-radius: 20px;
+    border-color: black;
     background-color: rgb(211, 92, 13);
     box-shadow: 0 3px rgba(145, 84, 41, 0.425);
     font-size: 24px;
     font-weight: bold;
+    cursor: pointer;
 }
 
-.gameMenu .counter button:hover {
+.gameMenu .counter .earner:hover {
     background-color: rgb(204, 121, 65);
 }
 
-.gameMenu .counter button:active {
+.gameMenu .counter .earner:active {
     background-color: rgb(204, 121, 65);
     box-shadow: 0 1px black;
     transform: translateY(4px);
@@ -143,9 +145,11 @@ body {
     color: green;
 }
 
+
 .gameMenu .fa-dollar-sign {
     color: rgb(255, 196, 0);
 }
+
 
 /* --------------------- */
 /* -------UPGRADES------- */
@@ -200,21 +204,16 @@ body {
         font-size: 20px
     }
 
-    .gameMenu .counter button {
+    .gameMenu .counter .earner {
         padding: 10px 25px;
         font-size: 20px;
     }
 
-    .upgrades .upg {
-        width: 60px;
-        height: 60px;
-    }
-
+    .upgrades .upg,
     .upgrades img {
         width: 60px;
         height: 60px;
     }
-
 }
 
 @media (max-height: 670px) {
@@ -225,7 +224,6 @@ body {
 }
 
 @media (max-height: 580px) {
-
     :root {
         --heightGameArea: 320px;
         --heightGameMenu: 160px;
@@ -239,18 +237,15 @@ body {
         font-size: 16px
     }
 
-    .gameMenu .counter button {
+    .gameMenu .counter .earner {
         padding: 8px 16px;
         font-size: 16px;
     }
 }
 
 @media(max-width: 500px) {
-    .upgrades .upg {
-        width: 50px;
-        height: 50px;
-    }
 
+    .upgrades .upg,
     .upgrades img {
         width: 50px;
         height: 50px;
@@ -269,16 +264,12 @@ body {
         font-size: 14px
     }
 
-    .gameMenu .counter button {
+    .gameMenu .counter .earner {
         padding: 4px 12px;
         font-size: 14px;
     }
 
-    .upgrades .upg {
-        width: 40px;
-        height: 40px;
-    }
-
+    .upgrades .upg,
     .upgrades img {
         width: 40px;
         height: 40px;

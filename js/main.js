@@ -66,15 +66,17 @@ function checkIsEnoughtMoney() {
 function isEnoughtMoney(upgrade, upgradeCost) {
     upgrade.addEventListener("mouseover", () => {
         if (money >= upgradeCost) {
+            upgrade.style.cursor = "pointer";
             upgrade.style.opacity = "1";
             upgrade.style.transform = "scale(1.1)";
         }
     })
 
     upgrade.addEventListener("mouseout", () => {
+        upgrade.style.cursor = "default";
         upgrade.style.opacity = "0.7";
         upgrade.style.transform = "scale(1)";
-    })
+    });
 }
 
 
